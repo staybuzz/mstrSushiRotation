@@ -1,0 +1,21 @@
+{
+	"name": "mstr.in SushiRotate",
+	"version": "0.1",
+	"manifest_version": 2,
+
+	"description": "mstr.inの寿司タグが付いている写真をマウスオーバーで回転させる",
+	"icons": {
+		"128": "icon128.png"
+	},
+
+	"permissions": [
+		"tabs", "http://*/*"
+	],
+
+	"content_scripts": [
+		{
+			"matches": ["https://mstr.in/photos/*"],
+			"js": ["jquery/jquery-2.1.0.min.js","jquery/jQueryRotateCompressed.js","rotate.js"]
+		}
+	]
+}
